@@ -21,7 +21,7 @@ class mailController extends Controller
         $email->setSubject('testing');
         $email->addTo('rakesh@vibhuti.biz');
         $email->addContent("text/html",'testing');
-        $sendgrid = new \SendGrid('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');
+        $sendgrid = new \SendGrid('SENDGRID_API_KEY');
         try {
             $response = $sendgrid->send($email);
             dd($response);
